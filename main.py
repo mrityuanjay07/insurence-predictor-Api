@@ -73,7 +73,9 @@ class UserInput(BaseModel):
 def hello():
     return {"message": "insurance premium prediction system"}
 
-
+@app.get("/about")
+def about():
+    return {"message": "This is fully functional insurence premium prediction model which is use to predict the premium of the insurence of the customer ."}
 
 
 @app.post('/predict')
