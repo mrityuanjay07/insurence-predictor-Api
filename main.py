@@ -79,11 +79,19 @@ class UserInput(BaseModel):
 
 @app.get("/")
 def hello():
-    return {"message": "insurance premium prediction system"}
+    return {"message": "insurance premium prediction API"}
 
 @app.get("/about")
 def about():
-    return {"message": "This is fully functional insurence premium prediction model which is use to predict the premium of the insurence of the customer ."}
+    return {"message": "This is fully functional insurence premium prediction API which is use to predict the premium of the insurence of the customer ."}
+
+@app.get('/health')
+def health_check():
+    return{
+        'status':'Ok',
+        'model_load': 'model is loaded'
+
+    }
 
 
 @app.post('/predict')
