@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Path,HTTPException,Query
 from fastapi.responses import JSONResponse
 from schema.user_input import UserInput
-from model.predict import predict_output, model
+from model.predict import predict_output, model, model_version
 
 
 app = FastAPI()
@@ -18,7 +18,8 @@ def about():
 def health_check():
     return{
         'status':'Ok',
-        'model_load': 'model is loaded'
+        'model_load': 'model is loaded',
+        
 
     }
 
