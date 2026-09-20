@@ -6,9 +6,6 @@ from model.predict import predict_output, model, model_version
 
 app = FastAPI()
 
-@app.get("/")
-def hello():
-    return {"message": "insurance premium prediction API"}
 
 @app.get("/about")
 def about():
