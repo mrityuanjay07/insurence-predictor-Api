@@ -1,10 +1,12 @@
-FROM python:3.9
+FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY . /final
+COPY requirement.txt .
 
 RUN pip install -r requirement.txt
+
+copy . .
 
 EXPOSE 8000
 
