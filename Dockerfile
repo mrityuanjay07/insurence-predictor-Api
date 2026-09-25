@@ -4,9 +4,9 @@ WORKDIR /app
 
 COPY requirement.txt .
 
-RUN pip install -r requirement.txt
+RUN pip install --no-cache-dir -r requirement.txt
 
-copy . .
+COPY . .
 
 EXPOSE 8000
 
